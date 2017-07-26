@@ -199,6 +199,25 @@ def handle_input():
             title = args[0]
             get_grades_by_title(title)
 
+# def get_grades_by_github(github):
+#     """Get a list of all grades for a student by their github username"""
+
+#     QUERY = """
+#         SELECT project_title, grade
+#         FROM Grades
+#         WHERE student_github = :github
+#         """
+
+#     db_cursor = db.session.execute(QUERY, {'github': github})
+
+#     rows = db_cursor.fetchall()
+
+#     for row in rows:
+#         print "Student {acct} received grade of {grade} for {title}".format(
+#             acct=github, grade=row[1], title=row[0])
+
+#     return rows
+
 
 if __name__ == "__main__":
     connect_to_db(app)
